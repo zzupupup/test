@@ -11,12 +11,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 配置环境
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
       - name: config environment
-        uses: actions/checkout@v2
-        uses: actions/setup-node@v1
         run: npm install -g
-        env:
-          COOKIE: ${{ secrets.COOKIE }}
+      
       - name: run
         run: node index
+        env:
+          COOKIE: ${{secrets.COOKIE}}
+          TOKEN: ${{secrets.TOKEN}}
