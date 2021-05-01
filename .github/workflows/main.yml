@@ -15,7 +15,8 @@ jobs:
       - uses: actions/setup-node@v1
       - name: config environment
         run: npm install -g
-        env:
-          COOKIE: ${{ secrets.COOKIE }}
+      
       - name: run
         run: node index
+        env:
+          COOKIE: ${{secrets.COOKIE}}
