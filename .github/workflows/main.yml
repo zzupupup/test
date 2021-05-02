@@ -3,8 +3,9 @@ name: auto-check-in
 
 on:
   schedule:
-    - cron: 0,30 16 * * *
-  push:
+    - cron: 0/5 2 * * *
+  watch:
+    types: started
 
 jobs:
   check-in:
