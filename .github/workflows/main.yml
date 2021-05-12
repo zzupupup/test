@@ -3,7 +3,7 @@ name: auto-check-in
 
 on:
   schedule:
-    - cron: 0 16 * * *
+    - cron: 0 12 * * *
 
 jobs:
   check-in:
