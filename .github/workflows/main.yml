@@ -2,6 +2,7 @@ name: auto-check-in
 
 
 on:
+  push:
   schedule:
     - cron: 0 12 * * *
 
